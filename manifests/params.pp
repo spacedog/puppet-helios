@@ -10,6 +10,9 @@ class helios::params {
   $helios_web_group   = 'helios'
   $db_engine          = 'mysql'
   $db_engine_packages = ['MySQL-python', 'postgresql-devel']
+  $http_socket        = ':8080'
+  $socket             = ':10001'
+  $app_name           = 'helios'
 
   case $db_engine {
     'mysql': {
@@ -19,6 +22,5 @@ class helios::params {
       $db_engine_backend  = 'postgresql_psycopg2'
     }
   }
-
 }
 
